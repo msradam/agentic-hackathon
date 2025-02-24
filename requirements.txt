@@ -1,0 +1,4 @@
+osmnx
+networkx
+nx-arangodb
+python-arango
