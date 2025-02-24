@@ -2,3 +2,11 @@ osmnx
 networkx
 nx-arangodb
 python-arango
+pandas 
+numpy
+matplotlib
+langgraph
+langchain 
+langchain-openai
+langchain-community
+langchain-core
