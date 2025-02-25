@@ -5,6 +5,7 @@ python-arango
 pandas 
 numpy
 matplotlib
+jupyter
 langgraph
 langchain 
 langchain-openai
