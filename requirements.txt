@@ -2,10 +2,12 @@ osmnx
 networkx
 nx-arangodb
 python-arango
-pandas 
+pandas
+pyyaml 
 numpy
 matplotlib
 jupyter
+keplergl
 langgraph
 langchain 
 langchain-openai
