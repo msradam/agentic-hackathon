@@ -3,11 +3,13 @@ networkx
 nx-arangodb
 python-arango
 pandas
+geopay
 geopandas
 pyyaml 
 numpy
 matplotlib
 jupyter
+folium
 keplergl
 langgraph
 langchain 
@@ -16,3 +18,4 @@ langchain-community
 langchain-core
 langchain-anthropic
 langchain-experimental
+scikit-learn
