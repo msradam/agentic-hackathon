@@ -3,7 +3,7 @@ networkx
 nx-arangodb
 python-arango
 pandas
-geopay
+geopy
 geopandas
 pyyaml 
 numpy
