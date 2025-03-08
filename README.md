@@ -1,4 +1,4 @@
-# AskStreets: Query and Visualizing Street Networks using OpenStreetMap, ArangoDB, and LangGraph
+# 🛣️ AskStreets: Query and Visualizing Street Networks using OpenStreetMap, ArangoDB, and LangGraph
 Author: Adam Munawar Rahman, March 2025
 
 Using powerful libraries like OSMnx, we can retrieve street networks and feature datasets from OpenStreetMap and persist them as graph and collections in ArangoDB. Then, with a  ReACT agent model, feed natural language queries to LLMs to execute complex lookups, run GPU backed graph algorithms, and visualize geospatial coordinates - all to enable streamlined insights into the network properties of the geographic area we are analyzing.
