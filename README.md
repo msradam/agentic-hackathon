@@ -23,10 +23,12 @@ Ensure your ArangoDB instance is running, e.g. to startup the local Docker conta
 docker run -e ARANGO_ROOT_PASSWORD=<root_password> -p 8529:8529 arangodb/arangodb
 ```
 
-Then startup the notebook:
+Then startup the Jupyter server:
 ```
 jupyter-notebook
 ```
+
+There are two versions of the AskStreets notebook - `askstreets-gpu.ipynb` which is the hackathon submission with GPU acceleration completed query examples, and `askstreets.ipynb` without GPU acceleration and cleared cell output.
 
 ## Inspiration
 During my internship at UNICEF Innovation in NYC, I used OpenStreetMap and NetworkX to calculate distances between schools and health facilities using country street networks. By writing code to execute graph algorithms, I was able to generate data to address a real-world issue.
