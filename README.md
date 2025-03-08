@@ -6,7 +6,7 @@ Using powerful libraries like OSMnx, we can retrieve street networks and feature
 ## Requirements
 - Python 3.10
 - An ArangoDB instance, e.g. a [local Docker container](https://arangodb.com/download-major/docker/)
-- (for GPU acceleration) Nvidia CUDA toolkit, a compatible NVIDIA GPU, and RAPIDS (follow the install guide [here](https://docs.rapids.ai/install/) )
+- (for GPU acceleration) Nvidia CUDA toolkit, a compatible NVIDIA GPU, and RAPIDS (follow the install guide [here](https://docs.rapids.ai/install/))
 - A `credentials.yml` file with API keys for your desired AI platform (see sample file in repo)
 
 ## Running the Code
@@ -35,7 +35,7 @@ There are two versions of the AskStreets notebook:
 `askstreets-gpu.ipynb` also contains output for additional queries that were not demo'd in the video submission.
 
 ## Inspiration
-During my internship at UNICEF Innovation in NYC, I used OpenStreetMap and NetworkX to calculate distances between schools and health facilities using country street networks. By writing code to execute graph algorithms, I was able to generate data to address a real-world issue.
+During my internship at UNICEF Innovation in NYC, I used OpenStreetMap, OSMnx, and NetworkX to calculate distances between schools and health facilities using country street networks. By writing code to execute graph algorithms, I was able to generate data to address a real-world issue.
 
 I would like to extend this capability towards a more general use-case - if you're a city planner, business owner, or architect, you may also wish to ask questions about street networks but lack the ability to write lengthy algorithms. This is where AskStreets comes in - by providing the ability to translate natural language queries into street network analysis.
 
@@ -48,10 +48,10 @@ By passing a query to the `query_street_network` function, it will invoke the Re
 I used OSMnx to download street network graphs and geographic features for certain locations, prepared this data to load into ArangoDB, then wrote the LLM-based tools and ReAct agent code for the agentic app. 
 
 ## Challenges we ran into
-Prompt engineering was a large aspect of this project, I needed to revise the prompts per tool multiple times as I continuously tested and analyzed the output of the ReAct agent, so that I could provide the AI models with more context to properly interpret the user queries and assemble the correct code. Modifying the tools to properly interact with each other and work in tandem to generate the correct intermediate output for each to use was also challenging, but ultimately rewarding.
+Prompt engineering was a large aspect of this project, I needed to revise the prompts per tool multiple times as I continuously tested and analyzed the output of the ReAct agent, so that I could provide the AI models with more context to properly interpret the user queries and assemble the correct code. Modifying the tools to properly interact with each other and work in tandem to generate the correct intermediate output to pass between them was also challenging, but ultimately rewarding.
 
 ## Accomplishments that we're proud of
-I particularly enjoyed seeing the outcome of these tools, being able to correctly interpret user queries about street networks and correctly identifying the street network attributes to filter or run algorithms on. I especially appreciated that by loading additional datasets like geographic features and health facility data into ArangoDB, along with the graph network, that the AQL tool was able to interpret the natural language queries correctly and pull data across these sources.
+I particularly enjoyed seeing the outcome of these tools, which are able to correctly interpret user queries about street networks and correctly identifying the street network attributes to filter or run algorithms on. I especially appreciated that by loading additional datasets like geographic features and health facility data into ArangoDB, along with the graph network, the AQL tool was able to interpret the natural language queries correctly and pull data across these sources.
 
 ## What we learned
 I learned how to work with the LangChain and LangGraph libraries, how to invoke LLMs and prompt engineer to answer specific questions, and how to prepare OSMnx data to load into ArangoDB. 
@@ -59,6 +59,6 @@ I learned how to work with the LangChain and LangGraph libraries, how to invoke 
 ## What's next for AskStreets: Querying and Visualizing Street Networks
 Working with geospatial data has so much potential! In the submission notebook, I demonstrate at the end how health facility data can be overlaid with the street network graph and features data so that it can also be queried by AQL. By overlaying and combining different data sets, this has the potential to answer many different types of the queries. 
 
-The AI tools can also be enhanced to be more precise, for example, different models can be deployed for each tool for their particular usecase. More tools can also be written - for example, to pull in more data from OpenStreetMap if necessary - or the visualization tool can be updated to draw paths between points. The prompts can also be further tuned to avoid redundant operations like transferring coordinate lookups between tools. 
+The AI tools can also be enhanced to be more precise, for example, different models can be deployed for each tool for their particular use case. More tools can also be written - for example, to pull in more data from OpenStreetMap if necessary - or the visualization tool can be updated to draw paths between points. The prompts can also be further tuned to avoid redundant operations like repeating coordinate lookups.
 
-This app can be further expanded with a friendly UI that can not only accept queries, but also automatically download OSM road networks and features from a user-specified location. Possibly even via integration with a sophisticated mapping tool like kepler.gl, where the process of querying and visualizing can be even further streamlined.
+This app can be further expanded with a friendly UI that can not only accept queries, but also automatically download OSM road networks and features from a user-specified location. It can even be integrated with a sophisticated mapping tool like kepler.gl, where the process of querying and visualizing can be even further streamlined.
