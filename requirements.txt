@@ -16,6 +16,7 @@ langchain
 langchain-openai
 langchain-community
 langchain-core
+langchain-ibm
 langchain-anthropic
 langchain-experimental
 scikit-learn
