@@ -3,6 +3,31 @@ Author: Adam Munawar Rahman, March 2025
 
 Using powerful libraries like OSMnx, we can retrieve street networks and feature datasets from OpenStreetMap and persist them as graph and collections in ArangoDB. Then, with a  ReACT agent model, feed natural language queries to LLMs to execute complex lookups, run GPU backed graph algorithms, and visualize geospatial coordinates - all to enable streamlined insights into the network properties of the geographic area we are analyzing.
 
+## Requirements
+- Python 3.10
+- An ArangoDB instance, e.g. a [local Docker container](https://arangodb.com/download-major/docker/)
+- (for GPU acceleration) Nvidia CUDA toolkit, a compatible NVIDIA GPU, and RAPIDS (follow the install guide [here](https://docs.rapids.ai/install/) )
+- A `credentials.yml` file with API keys for your desired AI platform (see sample file in repo)
+
+## Running the Code
+
+Clone the repo, and in the `askstreets` directory:
+```
+python3.10 -m venv env
+source env/bin/activate 
+pip3 install -r requirements.txt
+```
+
+Ensure your ArangoDB instance is running, e.g. to startup the local Docker container:
+```
+docker run -e ARANGO_ROOT_PASSWORD=<root_password> -p 8529:8529 arangodb/arangodb
+```
+
+Then startup the notebook:
+```
+jupyter-notebook
+```
+
 ## Inspiration
 During my internship at UNICEF Innovation in NYC, I used OpenStreetMap and NetworkX to calculate distances between schools and health facilities using country street networks. By writing code to execute graph algorithms, I was able to generate data to address a real-world issue.
 
