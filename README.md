@@ -54,7 +54,7 @@ Prompt engineering was a large aspect of this project; I needed to revise the pr
 I particularly enjoyed seeing the outcome of these tools, which are able to accurately interpret user queries about street networks and correctly identify the geographic attributes to filter or run algorithms against. I especially appreciated that by loading additional datasets like OpenStreetMap features and health facility data into ArangoDB, along with the graph network, the AQL tool was able to pull data across these sources to answer user queries with a higher degree of specificity. 
 
 ## What we learned
-I learned how to work with the LangChain and LangGraph libraries, how to invoke LLMs and prompt engineer to improve answers to queries, and how to prepare OSMnx data to load into ArangoDB. 
+I learned how to prepare OSMnx data to load into ArangoDB, how to invoke LLMs and prompt engineer to improve answers to queries, and how to work with the LangChain and LangGraph libraries.
 
 ## What's next for AskStreets: Querying and Visualizing Street Networks
 Working with geospatial data has so much potential! In the submission notebook, I demonstrate at the end how health facility data can be overlaid with the street network graph and OpenStreetMap features data so that it can also be queried by AQL. By overlaying and combining even more data sets, we can enhance the app's ability to answer many different types of queries. 
